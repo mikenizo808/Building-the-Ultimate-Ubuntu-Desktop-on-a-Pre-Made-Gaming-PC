@@ -971,10 +971,12 @@ Here is an example of some `InfluxQL` that you can write yourself or have auto-g
 
 Along with the proper telegraf configuration and signing up for a free api account at openweather.org, I can track weather stats from my Raspberry Pi (or any node with internet access).
 
-    from(bucket: "telegraf/autogen")
+```
+  from(bucket: "telegraf/autogen")
   |> range(start: v.timeRangeStart)
   |> filter(fn: (r) => r._measurement == "weather")
   |> last()
+```
 
 *Note: The above assumes you have already edited your `telegraf.conf` to customize the `openweather` section.*
 
