@@ -556,8 +556,7 @@ Launch `virt-manager` as desired from terminal or application menu. Then, point 
 *Note: *You can also create a VM from the command line, if desired.*
 
 
-
-# Performance Metrics COllection and Data Visualization
+# Performance Metrics Collection and Data Visualization
 
 *Note: This is the best part. If you get this up and running you can gather data points from anything, including system performance of windows, linux, macOS, Raspberry Pi, and even your drum machine (if your drum machine runs linux, like the Akai MPC Live, X or One)*
 
