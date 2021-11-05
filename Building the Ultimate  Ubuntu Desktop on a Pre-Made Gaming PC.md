@@ -19,13 +19,13 @@ For those wanting to build an entire Desktop system running Linux, you can follo
 Sections of this document:
 
 - Hardware Setup
-- OS SETUP
-- UBUNTU DESKTOP BASICS
+- OS Setup
+- Ubuntu Desktop Basics
 - Install PowerShell and Visual Studio Code
-- GENERAL OS SECTION
-- VIRTUALIZATION SECTION
-- PERFORMANCE METRICS COLLECTION AND DATA VISUALIZATION
-- APPENDIX
+- General OS Section
+- Virtualization Section
+- Performance Metrics Collection and Data Visualization
+- Appendix (Install InfluxDB 2.x instead of 1.x)
 
 #### Hardware
 Ideally, use a physical desktop for the most immersive experience.  This way you can easily add a dedicated SSD for the Ubuntu installation (though you could install onto existing disks that have Windows, etc.).
@@ -845,7 +845,7 @@ As we know, `telegraf` can send stats locally or remotely to InfluxDB.  Since we
      
      https://portal.influxdata.com/downloads/
 
-- Option 2 - Or, use `wget`, which exists on most linux distributions (including the `Akai MPC Live, X and One`).
+- Option 2 - Use `wget`, which exists on most linux distributions (including the `Akai MPC Live, X and One`).
 
 *Tip: Be sure to `cd` to the appropriate directory first as shown in the examples below*
 
@@ -969,7 +969,7 @@ Spice up your dashboards with some other fun stats.
 #### Use `InfluxQL` to grab weather reports
 Here is an example of some `InfluxQL` that you can write yourself or have auto-generated for you.  This was done at the `8888` port using the web interface (the normal place you are working on things with `TICK` stack 1.x).
 
-Along with the proper telegraf configuration and signing up for a free api account at openweather.org, I can track weather stats from my Raspberry Pi (or any node with internet access).
+Along with the proper telegraf configuration and signing up for a free api account at `https://openweathermap.org/`, I can track weather stats from my Raspberry Pi (or any node with internet access).
 
 ```
   from(bucket: "telegraf/autogen")
@@ -978,7 +978,7 @@ Along with the proper telegraf configuration and signing up for a free api accou
   |> last()
 ```
 
-*Note: The above assumes you have already edited your `telegraf.conf` to customize the `openweather` section.*
+*Note: The above assumes you have already edited your `telegraf.conf` to customize the `openweathermap` section.*
 
 
 #### Optional - Monitoring a UPS (i.e. `APC`)
