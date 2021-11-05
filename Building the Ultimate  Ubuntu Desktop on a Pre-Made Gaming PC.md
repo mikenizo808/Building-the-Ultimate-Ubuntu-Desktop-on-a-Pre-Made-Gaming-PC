@@ -83,7 +83,7 @@ You need the following:
 *Note: Optionally, enter BIOS again and ensure that CPU virtualization is active (or wait until the `kvm` section later in this write-up)* 
 
 
-# OS SETUP
+# OS Setup
 
 *Note: This requires a "helper" node (i.e. some PC or macOS) that can create a bootable USB thumb drive for the Ubuntu install (using the `balena` application discussed below*
 
@@ -120,7 +120,7 @@ You need the following:
 
 
 
-# UBUNTU DESKTOP BASICS
+# Ubuntu Desktop Basics
 
 
 #### The `Ubuntu` Boot Menu (`grub`)
@@ -363,7 +363,7 @@ The `PowerShell` extension for VS Code adds automatic error checking to your pow
 
 
 
-# GENERAL OS SECTION
+# General OS Section
 
 #### Show Hidden Files in Ubuntu
 Unrelated to any apps thus far, we now discuss some general os items.
@@ -446,7 +446,7 @@ However, I also have a wireless connection for internet, and I want that to take
 
 
 
-# VIRTUALIZATION SECTION
+# Virtualization Section
 
 #### Install KVM on Ubuntu 20.x
 In the next few steps, we get configured to run virtual machines. This section is optional and we will not need this for future steps.
@@ -557,8 +557,7 @@ Launch `virt-manager` as desired from terminal or application menu. Then, point 
 
 
 
-# PERFORMANCE METRICS COLLECTION AND DATA VISUALIZATION
-
+# Performance Metrics COllection and Data Visualization
 
 *Note: This is the best part. If you get this up and running you can gather data points from anything, including system performance of windows, linux, macOS, Raspberry Pi, and even your drum machine (if your drum machine runs linux, like the Akai MPC Live, X or One)*
 
@@ -998,7 +997,7 @@ Step 2. - Then adjust the default address, if needed.
 
 
 
-# APPENDIX - MOST SHOULD SKIP THIS UNLESS WANTING INFLUXDB 2.x
+# Appendix - Most Should Skip This Unless Wanting InfluxDB 2.x
 
 
 #### Learn More About InfluxDB
