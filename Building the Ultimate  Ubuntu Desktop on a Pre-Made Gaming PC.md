@@ -163,11 +163,9 @@ We can see our video model using `lspci`.
 #### Optional - Use a "Proprietary" Graphics Driver
 Assuming you have the right hardware, you can use the proprietary driver from Nvidia.  Ubuntu already knows the versions available from them and presents them as an easy to click radio button.
 
-Step 1 - Navigate to "Show Applications > SOftware & Updates > Additional Drivers"
-Step 2 - Observe that "Nouveaux" is currently checked
-Step 3 - Check the radio button at the top such as:
-
- Using NVIDIA driver metapackage from nvidia-driver-470 (proprietary, tested)
+- Step 1 - Navigate to "Show Applications > SOftware & Updates > Additional Drivers"
+- Step 2 - Observe that "Nouveaux" is currently checked
+- Step 3 - Check the radio button at the top such as the `nvidia-driver-470 (proprietary, tested)`
 
 #### Show Operating System Info
 
