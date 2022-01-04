@@ -91,7 +91,7 @@ You need the following:
 
     https://ubuntu.com/download/desktop
 
-*Note: Select either the `20.04 LTS`, or the latest which is `21.10`. Both work great.*
+*Note: For developers you really should get version `20.04 LTS` which gives great stability and you can focus on coding.  We can optionally use something more recent such as the latest `21.10` which delivers more stable graphics, but impacts some apps such as `Unity3D` (if into that use `20.04 LTS` for sure).*
 
 #### INSTALLING UBUNTU
 
@@ -110,14 +110,14 @@ You need the following:
 *Note: The Ubuntu installer can only format and work with one disk at installation time.  This has the benefit of never wiping out your Windows installation (if any).*
 
 #### OPTIONAL - REPAIR THE USB THUMB DRIVE
-    You may notice that your thumb drive that we turned into a bootable Ubuntu installer, may not appear as healthy on other systems.  This is a result of the balena program we used earlier. For smaller drives like 32GB usually they are not impacted, but if the drive is larger, it may appear and unformatted on your other systems. To resolve this, we can download a utility that will repair our USB thumb drive.
-    
-    *Tip: Ignore the fact that this imager utility says "raspberry pi"; We use this just to format our USB thumb drive back to normal/healthy.*
 
-    Here is the utility discussed above:
+You may notice that your thumb drive that we turned into a bootable Ubuntu installer, may not appear as healthy on other systems.  This is a result of the balena program we used earlier. For smaller drives like 32GB usually they are not impacted, but if the drive is larger, it may appear and unformatted on your other systems. To resolve this, we can download a utility that will repair our USB thumb drive.
 
-        https://www.raspberrypi.com/software/
+*Tip: Ignore the fact that this imager utility says "raspberry pi"; We use this just to format our USB thumb drive back to normal/healthy.*
 
+Here is the utility:
+
+ https://www.raspberrypi.com/software/
 
 
 # Ubuntu Desktop Basics
@@ -151,7 +151,7 @@ You can follow the GUI prompts that will appear from time to time, or you can up
 *Note: Some commands we run in this setup guide will require `sudo` (elevated power).*
 
 #### Show Video Card Model
-The drivers are included with the kernel automatically, but we can look and see what video card we have with `lspci`.
+We can see our video model using `lspci`.
 
     lspci | grep VGA
 
@@ -159,6 +159,15 @@ The drivers are included with the kernel automatically, but we can look and see 
 
     ike@ubuntu02:~$ lspci | grep VGA
     01:00.0 VGA compatible controller: NVIDIA Corporation TU116 [GeForce GTX 1660 Ti] (rev a1)
+
+#### Optional - Use a "Proprietary" Graphics Driver
+Assuming you have the right hardware, you can use the proprietary driver from Nvidia.  Ubuntu already knows the versions available from them and presents them as an easy to click radio button.
+
+Step 1 - Navigate to "Show Applications > SOftware & Updates > Additional Drivers"
+Step 2 - Observe that "Nouveaux" is currently checked
+Step 3 - Check the radio button at the top such as:
+
+ Using NVIDIA driver metapackage from nvidia-driver-470 (proprietary, tested)
 
 #### Show Operating System Info
 
