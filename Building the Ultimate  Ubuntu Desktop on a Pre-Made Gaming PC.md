@@ -161,7 +161,7 @@ We can see our video model using `lspci`.
     01:00.0 VGA compatible controller: NVIDIA Corporation TU116 [GeForce GTX 1660 Ti] (rev a1)
 
 #### Optional - Use a "Proprietary" Graphics Driver
-Assuming you have the right hardware, you can use the proprietary driver from Nvidia.  Ubuntu already knows the versions available from them and presents them as an easy to click radio button.
+Assuming you have the right hardware, you can use the proprietary driver from Nvidia.  Ubuntu already knows the versions available and presents them as an easy to click radio button.
 
 - Step 1 - Navigate to "Show Applications > SOftware & Updates > Additional Drivers"
 - Step 2 - Observe that "Nouveaux" is currently checked
