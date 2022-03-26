@@ -5,7 +5,7 @@ Here we get you up and running with the latest desktop experience from Ubuntu, i
 
  - Choose an Ubuntu Desktop Version
  - Install Ubuntu Desktop from USB (without impacting Windows, if any)
- - Install PowerShell and VS Code using `apt-get`
+ - Install PowerShell and VS Code using Ubuntu's package manager (`apt`)
  - Install and Configure `kvm` to run virtual machines
  - Configure daily backups to `LaCie` (or similar) USB drive
  - Install the Influxdata `TICK` stack for gathering and visualizing data
@@ -136,7 +136,7 @@ Press `CTRl` `SHIFT` `+` to increase the size
 Press `CTRl` `-`         to decrease the size
 
 #### Get Updates
-You can follow the GUI prompts that will appear from time to time, or you can update from the command line using `apt-get`.
+You can follow the GUI prompts that will appear from time to time, or you can update from the command line using `apt`.
 
     #check for available updates
     sudo apt update
@@ -259,14 +259,14 @@ Then simply lauch the native Ubuntu backup utilty `deja dup`, which is located i
 
 # Install PowerShell and Visual Studio Code
 
-*Note: You can install powershell and/or vs code as snaps, but using `apt-get` is more dependable currently as some snap versions (of powershell anyway) have issues with various Ubuntu releases (i.e. 21.04 hates powershell snaps).*
+*Note: You can install powershell and/or vs code as snaps, but using `apt` is more dependable currently as some snap versions (of powershell anyway) have issues with various Ubuntu releases (i.e. 21.04 hates powershell snaps).*
 
 #### Optional - List your OS Info
 
     cat /etc/os-release
 
 #### About PowerShell Installs - To `apt` or `deb`
-You must have exactly version `18.04`, `20.04`, or `21.04` to get the bits from `apt-get`.
+You must have exactly version `18.04`, `20.04`, or `21.04` to get the bits from `apt`.
 
 If you are running the latest `21.10` you cannot use `apt`, but instead should use `dpkg` as below.  Note that we use the old `20.04` version on Ubuntu `21.10`.
 
@@ -353,8 +353,8 @@ The current install is the step we just performed above. However, if you are run
 *Tip: Over time there will be updates available. You can ignore the prompts inside the app to download the update, and instead use `apt-get` as shown below*
  
     #Updating Visual Studio Code
-    sudo apt-get -y update
-    sudo apt-get -y upgrade
+    sudo apt update
+    sudo apt upgrade -y
 
 #### Add PowerShell Extension to VS Code
 The `PowerShell` extension for VS Code adds automatic error checking to your powershell scripts (using `PSScriptAnalyzer`), among many other cool features.
@@ -379,15 +379,6 @@ Sometimes, documentation will something like we placed your stuff in `~/.config/
     1. Locate the `Files` browser (an icon that looks like a folder on your Ubuntu taskbar)
     2. Press `CTRL+H` to show/hide any hidden files or folders.
 
-
-#### Prevent OS Upgrade Prompts (for users of `Ubuntu LTS`)
-This is valuable perhaps if you are running an `lts` release. By adding the following, we can prevent prompts to upgrade to anything that is not `lts`.
-
-Simply edit the file below and change `Prompt=normal` to `Prompt=lts` near the bottom of the file.
-
-    sudo nano /etc/update-manager/release-upgrades
-
-*Note: If you are not running an `lts` release already, then the system assumes the setting to be `normal` even if you set it to `lts`.*
 
 #### Show Hard Power Offs
 Much like a check disk (or `chkdsk`) in Windows, Linux will run an `fchk` after a hard power off (i.e. loss of power, user held the power button down, etc.).  The following returns log entires related to `fchk` (both naturally occurring or forced `fchk` will show here).
