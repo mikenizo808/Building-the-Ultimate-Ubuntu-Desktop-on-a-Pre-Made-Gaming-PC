@@ -139,13 +139,13 @@ Press `CTRl` `-`         to decrease the size
 You can follow the GUI prompts that will appear from time to time, or you can update from the command line using `apt-get`.
 
     #check for available updates
-    sudo apt-get -y update
+    sudo apt update
 
     #optional - show the updates
     sudo apt list --upgradable
 
     #install the updates
-    sudo apt-get -y upgrade
+    sudo apt upgrade -y
 
 *Note: Some commands we run in this setup guide will require `sudo` (elevated power).*
 
