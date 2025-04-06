@@ -1,5 +1,11 @@
 # Building-the-Ultimate-Ubuntu-Desktop-on-a-Pre-Made-Gaming-PC
 
+## Archive Notice
+
+This guide is old and is being archived, but will remain available.
+Please see my guides for using `Ubuntu 24.04` and `InfluxDB3` for more modern appraoches (i.e. the `influxdb.key` is now deprecated, instead use the newer one that ends in `7515`).
+Also, do not use `balenaEtcher` at all, and instead simply use the `Raspberry Pi Imager` to create your bootable USB Thumbdrive.
+
 #### Overview
 Here we get you up and running with the latest desktop experience from Ubuntu, including step-by-step instructions for building the ultimate linux setup.
 
